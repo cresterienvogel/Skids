@@ -8,7 +8,7 @@ timer.Simple(0, function()
 end)
 
 hook.Add("CheckPassword", "XPA Skids", function(steamid)
-	if table.HasValue(skids, util.SteamIDTo64(steamid)) then
+	if table.HasValue(skids, util.SteamIDFrom64(steamid)) then
 		return false, "Prohibited connection"
 	end
 end)
